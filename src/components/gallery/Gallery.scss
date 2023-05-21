@@ -1,0 +1,50 @@
+.gallery{
+    width: 400px;
+
+    &__img{
+        
+        &-window{
+            width: 400px;
+
+            overflow: hidden;
+
+            border-radius: 16px;
+
+            img{
+                width: 400px;
+                object-fit: contain;
+            }
+        }
+
+        &-slider{
+            display: flex;
+        }
+    }
+
+    &__thumbs{
+        padding-top: 24px;
+
+        display: flex;
+
+        justify-content: space-between;
+    }
+
+    &-thumb{
+        height: 80px;
+        width: 80px;
+        border-radius: 8px;
+        overflow: hidden;
+
+        position: relative;
+
+        cursor: pointer;
+
+        img{
+            height: 100%;
+        }
+
+        &--selected{
+            opacity: 0.5;
+        }
+    }
+}

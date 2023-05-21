@@ -1,0 +1,16 @@
+.lightbox{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background: $black;
+    z-index: 9999999;
+
+    backdrop-filter: blur(16px);
+
+    display: grid;
+    place-content: center;
+
+
+}

@@ -1,0 +1,54 @@
+.gallery-mobile{
+    &__img{
+        
+        &-main {
+            position: relative;
+        }
+
+        &-window{
+            width: 100vw;
+
+            overflow: hidden;
+
+            img{
+                width: 100vw;
+                object-fit: contain;
+            }
+        }
+
+        &-slider{
+            display: flex;
+        }
+    }
+
+    &__btn-div{
+        position: absolute;
+
+        display: flex;
+
+        button{
+            position: absolute;
+            background-color: $white;
+            border: none;
+
+            height: 40px;
+            width: 40px;
+
+            border-radius: 24px;
+            display: grid;
+            place-content: center;
+            
+            top: calc(var(--galHt) - 20px);
+
+            transform-origin: center;
+
+            &:first-of-type{
+                left: 8px;
+            }
+
+            &:last-of-type{
+                left: calc(var(--galHt) * 2 - 50px);
+            }
+        }
+    }
+}

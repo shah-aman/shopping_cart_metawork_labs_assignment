@@ -1,0 +1,115 @@
+.navdesk{
+
+    position: sticky;
+
+    top: 0;
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    height: 102px;
+
+    justify-content: space-between;
+
+    border-bottom: 1px solid $blue-grey;
+
+    background: $white;
+
+    div:first-of-type{
+        display: flex;
+    }
+
+    &__logo{
+        height: 100%;
+        padding-right: 40px;
+    }
+
+    &__cat{
+        padding: 40px 0;
+        margin: 0 16px;
+        color: $blue-grey;
+        position: relative;
+
+        cursor: pointer;
+
+        user-select: none;
+
+        transition: color 0.3s;
+
+        &::after{
+            position: absolute;
+            height: 3px;
+            width: 100%;
+            background-color: $orange;
+            content: "";
+            bottom: 0;
+            left: 0;
+            transform: translateY(1px);
+
+            animation: nav-mouseout 0.1s ease-out 1 forwards;
+        }
+
+        &:hover{
+            color: $black;
+            &::after{
+                position: absolute;
+                height: 3px;
+                width: 0%;
+                background-color: $orange;
+                content: "";
+                bottom: 0;
+                left: 0;
+                transform: translateY(1px);
+
+                animation: nav-hover 0.3s ease-out 1 forwards;
+            }
+        }
+
+        // &:not:hover{
+        //     color: $black;
+        //     &::after{
+        //         position: absolute;
+        //         height: 4px;
+        //         width: 100%;
+        //         background-color: $orange;
+        //         content: "";
+        //         bottom: 0;
+        //         left: 0;
+        //         transform: translateY(1px);
+
+        //         animation: nav-mouseout 0.1s ease-in-out 1 forwards;
+        //     }
+        // }
+    }
+
+    &__icons{
+        display: flex;
+
+        align-items: center;
+    }
+
+    &__avatar{
+        height: 40px;
+        margin-left: 40px;
+    }
+}
+
+@keyframes nav-hover{
+    from{
+        width: 0;
+    }
+    to{
+        width: 100%;
+    }
+}
+
+@keyframes nav-mouseout{
+    from{
+        width: 100%;
+    }
+    to{
+        width: 0;
+    }
+}

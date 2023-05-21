@@ -1,0 +1,42 @@
+.cart-amt{
+    background-color: $blue-grey-l;
+    display: flex;
+    
+    justify-items: center;
+
+    height: 48px;
+
+    border-radius:8px;
+    
+    button{
+        background: none;
+        border: none;
+        font-size: 16px;
+        font-weight: 700;
+        color: $orange;
+        width: 3vw;
+    }
+
+    span{
+        text-align: center;
+        width: 5vw;
+        line-height: 48px;
+        font-weight: 700;
+    }
+}
+
+@media only screen and (max-width: 1024px){
+    .cart-amt{
+        display: grid;
+        grid-template-columns: minmax(0,1fr)  minmax(0,3fr)  minmax(0,1fr);
+
+        span{
+            width: 100%;
+        }
+
+        button{
+            width: 100%;
+            font-size: 24px;
+        }
+    }
+}

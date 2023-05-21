@@ -1,0 +1,166 @@
+@import './_global_vars';
+
+.App {
+  // height: 100vh;
+  width: 100vw;
+
+  padding: 0 10vw;
+
+  background-color: $white;
+  // overflow: hidden;
+
+  main{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    justify-items: center;
+    align-items: center;
+
+    grid-column-gap: 48px;
+
+    padding: 48px;
+    // padding-top: 64px;
+  }
+
+  &__prod{
+    width: 100%;
+    padding: 64px 0;
+
+    padding-right: 48px;
+
+    &-company{
+      color: $orange;
+      text-transform: uppercase;
+      font-size: 16px;
+      
+      padding-bottom: 24px;
+    }
+
+    &-name{
+      font-size: 48px;
+      margin-bottom: 40px;
+    }
+
+    &-desc{
+      color: $blue-grey-d;
+      line-height: 32px;
+      padding-bottom: 24px;
+    }
+
+    &-pricing{
+      padding-bottom: 24px;
+    }
+
+    &-discount{
+      display: flex;
+      align-items: center;
+      margin-bottom: 8px;
+
+      &-rate{
+        font-weight: 700;
+        color: $orange;
+        background: $orange-pale;
+
+        padding: 2px 8px;
+
+        border-radius: 8px;
+
+        margin-left: 16px;
+      }
+    }
+
+    &-baseprice{
+      font-weight: 700;
+      color: $blue-grey;
+      text-decoration: line-through;
+    }
+
+  }
+}
+
+@media only screen and (max-width: 1024px){
+  .App{
+    padding: 0 0;
+    height: 100vh;
+    main {
+      display: flex;
+      flex-direction: column;
+
+      padding: 5vw;
+    }
+
+    &__prod{
+      padding: 48px 24px 24px 24px;
+
+      &-company{        
+        padding-bottom: 16px;
+      }
+  
+      &-name{
+        font-size: 32px;
+        margin-bottom: 16px;
+      }
+
+  
+      &-pricing{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+
+      }
+  
+  
+      &-baseprice{
+        font-weight: 700;
+        color: $blue-grey;
+        transform: translateY(-4px);
+        text-decoration: line-through;
+      }
+  
+    }
+  }
+}
+
+@media only screen and (max-width: 501px){
+  .App{
+    padding: 0;
+    main{
+      display: flex;
+      flex-direction: column;
+
+      padding: 0;
+    }
+
+    &__prod{
+      padding: 24px;
+
+      &-company{        
+        padding-bottom: 16px;
+      }
+  
+      &-name{
+        font-size: 32px;
+        margin-bottom: 16px;
+      }
+
+  
+      &-pricing{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+
+      }
+  
+  
+      &-baseprice{
+        font-weight: 700;
+        color: $blue-grey;
+        transform: translateY(-4px);
+        text-decoration: line-through;
+      }
+  
+    }
+  }
+}
