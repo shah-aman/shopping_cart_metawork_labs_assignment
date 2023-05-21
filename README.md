@@ -34,11 +34,16 @@ This is a sample project that demonstrates how to build a shopping cart using Zu
 2. cd shopping-cart-zustand-nextjs
 
 3. ```npm install```
-4. ```npm run dev```
+4. ```npm start```
 
 # Usage
 The product list page will display a list of products.
 Click on the "Add to Cart" button to add products to the shopping cart.
 The shopping cart will be displayed on the product list page, showing the current items and total price.
 The shopping cart will persist across pages. If you navigate away from the product list page and come back, the cart will still be there.
+
+# screenshots
+<img width="1391" alt="image" src="https://github.com/shah-aman/shopping_cart_metawork_labs_assignment/assets/30745002/b5f430c9-38bf-4d99-9674-961eb88097cc">
+<img width="1391" alt="image" src="https://github.com/shah-aman/shopping_cart_metawork_labs_assignment/assets/30745002/528d67bd-9df0-4764-8433-82176f4722f3">
+
 
